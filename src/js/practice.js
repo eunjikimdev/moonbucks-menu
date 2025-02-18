@@ -4,8 +4,8 @@
 // - [x] 에스프레소 메뉴에 새로운 메뉴를 확인 버튼으로 추가한다
 // - [x] 에스프레소 메뉴에 새로운 메뉴를 엔터키 입력으로 추가한다
 // - [x]  추가되는 메뉴의 아래 마크업은 <ul id="espresso-menu-list" class="mt-3 pl-0"></ul>안에 삽입된다.
-// - [] 총 메뉴 갯수 count가 상단에 보여진다.
-// - [] 메뉴가 추가되면, input은 빈 값으로 초기화한다.
+// - [x] 총 메뉴 갯수 count가 상단에 보여진다.
+// - [x] 메뉴가 추가되면, input은 빈 값으로 초기화한다.
 // - [] 인풋값이 빈값이면 추가되지않는다.
 
 const $ = (selector) => document.querySelector(selector);
@@ -43,6 +43,7 @@ function App() {
       );
       const menuCount = $('#espresso-menu-list').querySelectorAll('li').length;
       $('.menu-count').innerText = `총 ${menuCount}개`;
+      $('#espresso-menu-name').value = '';
     }
   });
 }
